@@ -1,9 +1,0 @@
-Gdt.o: Gdt.c Clubcos1.h Gdt.h
-Idt.o: Idt.c Clubcos1.h Idt.h
-Memory.o: Memory.c Clubcos1.h Memory.h AsmFunc.h
-Interrupt.o: Interrupt.c Clubcos1.h Graphic.h
-Main.o: Main.c Clubcos1.h AsmFunc.h Graphic.h Memory.h Gdt.h Idt.h \
- Interrupt.h ../libClc1Share/clc1_memory.h
-EnglishFont.o: EnglishFont.c
-Graphic.o: Graphic.c Clubcos1.h Graphic.h ../libClc1Share/clc1_stdio.h \
- ../libClc1Share/clc1_memory.h

@@ -1,6 +1,0 @@
-strrev.o: strrev.c clc1_string.h
-strnlen.o: strnlen.c clc1_string.h
-itoa.o: itoa.c clc1_stdlib.h clc1_string.h
-strcpy.o: strcpy.c clc1_string.h
-strlen.o: strlen.c clc1_string.h
-sprintf.o: sprintf.c clc1_stdio.h clc1_string.h clc1_ctype.h

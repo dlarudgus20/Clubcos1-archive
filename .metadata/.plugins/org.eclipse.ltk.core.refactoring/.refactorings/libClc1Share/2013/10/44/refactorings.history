@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="자원 &apos;libClc1Share/itoa&apos;을(를) &apos;itoa.c&apos;(으)로 이름 바꾸기" description="&apos;itoa&apos; 자원 이름 바꾸기" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="itoa" name="itoa.c" stamp="1382833344387" updateReferences="true"/>&#x0A;<refactoring comment="자원 &apos;libClc1Share/sprintf.h&apos;을(를) &apos;sprintf.c&apos;(으)로 이름 바꾸기" description="&apos;sprintf.h&apos; 자원 이름 바꾸기" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="sprintf.h" name="sprintf.c" stamp="1382833444615" updateReferences="true"/>
-</session>
