@@ -1,0 +1,483 @@
+     1                                  %include "../Bootsector/init.inc"
+     2                              <1> READ_CYLINDERS equ 3									; 읽을 실린더 수
+     3                              <1> FLOPPY_SEGMENT equ 0x07e0								; 읽기 시작할 메모리의 세그먼트
+     4                              <1> 
+     5                              <1> KERNEL_ADDR equ (FLOPPY_SEGMENT * 0x10 + 0x4200 - 0x200); 커널의 위치 = 0xc000
+     6                              <1> 													; = FLOPPY_SEGMENT * 0x10 + 0x4200 - 0x200
+     7                              <1> ; !!주의!!
+     8                              <1> ; [ 0x00080000 ~ 0x00100000 ) => 사용 불능 메모리
+     9                              <1> ; [ 0x00007e00 ~ 0x00080000 ) 까지만 로드 가능
+    10                              <1> ; 480.5 KiB -> 최대 26 실린더 로드 가능 (468 KiB)
+    11                                  
+    12                                  ; VBE
+    13                                  VBE_INFO_SEGMENT equ 0x0200						; VBE의 정보가 저장되는 세그먼트의 위치
+    14                                  VBE_MODE equ 0x117								; VBE 화면 모드
+    15                                  
+    16                                  ; BootInfo
+    17                                  BOOT_INFO equ 0x7000							; BootInfo의 위치
+    18                                  READ_CYLS equ 0									; 읽어들인 실린더 수
+    19                                  SCREEN_X equ 4									; 화면의 X좌표 크기
+    20                                  SCREEN_Y equ 8									; 화면의 Y좌표 크기
+    21                                  VIDEO_MEMORY equ 12								; 비디오 메모리의 포인터
+    22                                  BOOT_INFO_SIZE equ 20							; BootInfo의 크기
+    23                                  
+    24                                  ; Memory
+    25                                  MINIMAL_MEMORY equ 0x4000000
+    26                                  
+    27                                  MEMORY_MAP_ADD equ 0x1000
+    28                                  
+    29                                  ; Page Table
+    30                                  PAGE_PML4_ADDR equ 0x600000
+    31                                  PAGE_DIRPTR_ADDR equ 0x601000
+    32                                  PAGE_DIRECTORY_ADDR equ 0x602000
+    33                                  
+    34                                  PAGE_DIRPTR_ENTRY_COUNT equ 4					; Page DirPtr Entry 4개 -> 총 4GB까지 paging
+    35                                  
+    36                                  ; 복사
+    37                                  FLOPPY_CPY_ADD equ 0x100000						; 플로피 디스크의 데이터가 복사되는 주소
+    38                                  BOOT_INFO_CPY_ADD equ 0x268000					; BootInfo가 복사되는 주소
+    39                                  KERNEL_CPY_ADD equ 0x500000						; 커널이 복사되는 주소
+    40                                  KERNEL_STACK equ 0x500000						; 커널 스택의 주소
+    41                                  KERNEL_SIZE equ (1024*540)						; 커널의 최대 크기 = 540KB
+    42                                  
+    43                                  [org KERNEL_ADDR]
+    44                                  [bits 16]
+    45                                  
+    46                                  Kernel_start:
+    47 00000000 8CC8                    	mov ax, cs									; cs와 ds를 같게 한다
+    48 00000002 8ED8                    	mov ds, ax
+    49                                  
+    50 00000004 BB0000                  	mov bx, 0
+    51 00000007 8EE3                    	mov fs, bx
+    52                                  
+    53 00000009 6466C7060070030000-     	mov dword [fs:BOOT_INFO + READ_CYLS], READ_CYLINDERS
+    54 00000012 00                 
+    55                                  												; 몇 실린더를 읽었는지 BootInfo에 기록
+    56                                  	; VBE
+    57                                  vbe:
+    58 00000013 B80002                  	mov ax, VBE_INFO_SEGMENT
+    59 00000016 8EC0                    	mov es, ax
+    60 00000018 BF0000                  	mov di, 0									; es:di에 VBE정보가 들어간다
+    61 0000001B B8004F                  	mov ax, 0x4f00								; ax=0x4f00 -> VBE정보 및 존재 유무 확인
+    62 0000001E CD10                    	int 0x10									; BIOS 호출
+    63 00000020 83F84F                  	cmp ax, 0x004f								; VBE가 있다면 ax의 값은 0x004f이다
+    64 00000023 750B                    	jne vbe_error								; ax가 0x004f가 아니라면 vbe_error로 간다
+    65                                  
+    66 00000025 268B4504                	mov ax, [es:di + 4]							; es:di + 4에는 버전 정보가 있다.
+    67 00000029 3D0002                  	cmp ax, 0x0200								; 버전이 0x0200인지(2.0인지) 이상인지 확인한다
+    68 0000002C 7202                    	jb vbe_error								; 0x0200 미만이라면 vbe_error로 간다
+    69                                  
+    70 0000002E EB69                    	jmp vbe_success								; vbe_success로 간다
+    71                                  
+    72                                  vbe_error:
+    73 00000030 BE[4600]                	mov si, vbe_error_msg						; 에러 메세지의 주소
+    74                                  
+    75                                  real_error:
+    76 00000033 8A04                    	mov al, [si]								; 메세지의 한 글자 읽음
+    77 00000035 46                      	inc si										; si++
+    78 00000036 3C00                    	cmp al, 0									; al과 0을 비교
+    79 00000038 7409                    	je real_err_stop							; 0이면 stop으로 jmp
+    80 0000003A B40E                    	mov ah, 0x0e								; ah=0x0e -> 화면에 한 글자 출력
+    81 0000003C BB0F00                  	mov bx, 15									; 색 코드
+    82 0000003F CD10                    	int 0x10									; BIOS 호출(al엔 글자 코드)
+    83 00000041 EBF0                    	jmp real_error								; 루프를 돔
+    84                                  real_err_stop:
+    85 00000043 F4                      	hlt											; CPU를 일시정지
+    86 00000044 EBFD                    	jmp real_err_stop							; 무한루프
+    87                                  
+    88 00000046 436C7562636F733020-     vbe_error_msg db "Clubcos0 requires VBE 2.0, but this computer doesn't support VBE 2.0. System stop.", 0
+    89 0000004F 726571756972657320-
+    90 00000058 56424520322E302C20-
+    91 00000061 627574207468697320-
+    92 0000006A 636F6D707574657220-
+    93 00000073 646F65736E27742073-
+    94 0000007C 7570706F7274205642-
+    95 00000085 4520322E302E205379-
+    96 0000008E 7374656D2073746F70-
+    97 00000097 2E00               
+    98                                  
+    99                                  vbe_success:
+   100 00000099 B80002                  	mov ax, VBE_INFO_SEGMENT
+   101 0000009C 8EC0                    	mov es, ax
+   102 0000009E BF0000                  	mov di, 0									; es:di에 화면 모드 정보가 들어간다
+   103 000000A1 B8014F                  	mov ax, 0x4f01								; ax=0x4f01 -> 화면 모드 지원 여부 및 정보 확인
+   104 000000A4 B91701                  	mov cx, VBE_MODE								; cx -> 화면 모드
+   105 000000A7 CD10                    	int 0x10									; BIOS 호출
+   106 000000A9 83F84F                  	cmp ax, 0x004f								; 성공하면 ax의 값은 0x004f이다
+   107 000000AC 7582                    	jne vbe_error								; 아니라면 vbe_error로 간다
+   108                                  
+   109 000000AE 66B800000000            	mov eax, 0
+   110 000000B4 268B4512                	mov ax, [es:di + 0x12]						; 화면 모드+0x12 -> 화면 X방향 크기(2byte = word)
+   111 000000B8 6466A30470              	mov [fs:BOOT_INFO + SCREEN_X], eax			; BootInfo에 기록
+   112 000000BD 268B4514                	mov ax, [es:di + 0x14]						; 화면 모드+0x14 -> 화면 Y방향 크기(2byte = word)
+   113 000000C1 6466A30870              	mov [fs:BOOT_INFO + SCREEN_Y], eax			; BootInfo에 기록
+   114 000000C6 26668B4528              	mov eax, [es:di + 0x28]						; 화면 모드 정보+0x28 -> 비디오 메모리의 위치(pointer = 4byte = dword)
+   115 000000CB 6466A30C70              	mov [fs:BOOT_INFO + VIDEO_MEMORY], eax		; BootInfo에 기록 (8byte pointer)
+   116 000000D0 6466C7061070000000-     	mov dword [fs:BOOT_INFO + VIDEO_MEMORY + 4], 0
+   117 000000D9 00                 
+   118                                  
+   119 000000DA B8024F                  	mov ax, 0x4f02								; 그래픽 모드로 전환
+   120 000000DD BB1741                  	mov bx, (0100000b << 9) | VBE_MODE			; 화면 갱신 횟수=기본값, 선형 프레임 버퍼 모델, 화면 지움
+   121 000000E0 CD10                    	int 0x10									; BIOS 호출
+   122 000000E2 83F84F                  	cmp ax, 0x004f								; 성공하면 ax의 값은 0x004f이다
+   123 000000E5 0F8547FF                	jne vbe_error								; 아니라면 vbe_error로 간다
+   124                                  
+   125                                  	; Memory Map (Source from http://wiki.osdev.org/Detecting_Memory_(x86)#Getting_an_E820_Memory_Map )
+   126 000000E9 31DB                    	xor bx, bx
+   127 000000EB 8EC3                    	mov es, bx
+   128 000000ED BF0010                  	mov di, MEMORY_MAP_ADD	; es:di -> Memory Map
+   129 000000F0 6631DB                  	xor ebx, ebx			; ebx must be 0 to start
+   130 000000F3 6631ED                  	xor ebp, ebp			; keep an entry count in bp
+   131 000000F6 66BA50414D53            	mov edx, 0x0534D4150	; Place "SMAP" into edx
+   132 000000FC 66B820E80000            	mov eax, 0xe820
+   133 00000102 2666C7451401000000      	mov [es:di + 20], dword 1	; force a valid ACPI 3.X entry
+   134 0000010B 66B918000000            	mov ecx, 24				; ask for 24 bytes
+   135 00000111 CD15                    	int 0x15
+   136 00000113 725B                    	jc short failed		; carry set on first call means "unsupported function"
+   137 00000115 66BA50414D53            	mov edx, 0x0534D4150	; Some BIOSes apparently trash this register?
+   138 0000011B 6639D0                  	cmp eax, edx			; on success, eax must have been reset to "SMAP"
+   139 0000011E 7550                    	jne short failed
+   140 00000120 6685DB                  	test ebx, ebx			; ebx = 0 implies list is only 1 entry long (worthless)
+   141 00000123 744B                    	je short failed
+   142 00000125 EB1F                    	jmp short jmpin
+   143                                  e820lp:
+   144 00000127 66B820E80000            	mov eax, 0xe820			; eax, ecx get trashed on every int 0x15 call
+   145 0000012D 2666C7451401000000      	mov [es:di + 20], dword 1	; force a valid ACPI 3.X entry
+   146 00000136 66B918000000            	mov ecx, 24				; ask for 24 bytes again
+   147 0000013C CD15                    	int 0x15
+   148 0000013E 7229                    	jc short e820f			; carry set means "end of list already reached"
+   149 00000140 66BA50414D53            	mov edx, 0x0534D4150	; repair potentially trashed register
+   150                                  jmpin:
+   151 00000146 E31C                    	jcxz skipent			; skip any 0 length entries
+   152 00000148 80F914                  	cmp cl, 20				; got a 24 byte ACPI 3.X response?
+   153 0000014B 7607                    	jbe short notext
+   154 0000014D 26F6451401              	test byte [es:di + 20], 1	; if so: is the "ignore this data" bit clear?
+   155 00000152 7410                    	je short skipent
+   156                                  notext:
+   157 00000154 26668B4D08              	mov ecx, [es:di + 8]	; get lower dword of memory region length
+   158 00000159 26660B4D0C              	or ecx, [es:di + 12]	; "or" it with upper dword to test for zero
+   159 0000015E 7404                    	jz skipent				; if length qword is 0, skip entry
+   160 00000160 45                      	inc bp					; got a good entry: ++count, move to next storage spot
+   161 00000161 83C718                  	add di, 24
+   162                                  skipent:
+   163 00000164 6685DB                  	test ebx, ebx			; if ebx resets to 0, list is complete
+   164 00000167 75BE                    	jne short e820lp
+   165                                  e820f:
+   166 00000169 66892EFC0F              	mov dword [MEMORY_MAP_ADD - 4], ebp
+   167 0000016E EB09                    	jmp e820end
+   168                                  failed:
+   169 00000170 66C706FC0F00000000      	mov dword [MEMORY_MAP_ADD - 4], 0
+   170                                  e820end:
+   171 00000179 F8                      	clc						; flag clear
+   172                                  
+   173                                  	; A20 Gate
+   174 0000017A B0FF                    	mov al, 0xff								; PIC 인터럽트 금지
+   175 0000017C E621                    	out 0x21, al								; 마스터 PIC
+   176 0000017E 90                      	nop											; 계속 하면 안 될 때도 있으므로 잠시 쉰다.
+   177 0000017F E6A1                    	out 0xa1, al								; 슬레이브 PIC
+   178                                  
+   179 00000181 FA                      	cli											; CPU 인터럽트 금지
+   180                                  
+   181 00000182 E8FD01                  	call waitkbdout								; 키보드 컨트룰러가 준비될 때까지 기다림
+   182 00000185 B0D1                    	mov al, 0xd1								; 키보드 컨트룰러 내부의 포트 번호 지정 (0xdl = 기타 포트)
+   183 00000187 E664                    	out 0x64, al								; out!
+   184                                  
+   185 00000189 E8F601                  	call waitkbdout								; 키보드 컨트룰러가 준비될 때까지 기다림
+   186 0000018C B0DF                    	mov al, 0xdf								; A20 게이트 활성화 명령어
+   187 0000018E E660                    	out 0x60, al								; out!
+   188                                  
+   189 00000190 E8EF01                  	call waitkbdout
+   190                                  
+   191                                  	; Protected Mode로 전환
+   192 00000193 0F0116[ED03]            	lgdt [gdtr]									; GDT 로드
+   193                                  
+   194 00000198 0F20C0                  	mov eax, cr0								; cr0레지스터의 값을 변경한다.
+   195 0000019B 6683C801                	or eax, 0x00000001							; Protected Mode
+   196 0000019F 6625FFFFFF7F            	and eax, 0x7fffffff							; 페이징을 사용하지 않음
+   197 000001A5 0F22C0                  	mov cr0, eax								; mov!
+   198                                  
+   199 000001A8 66EA[B0010000]1800      	jmp dword SysCodeSelector:PM_Start			; 32비트 커널로 점프한다
+   200                                  
+   201                                  [bits 32]
+   202                                  PM_Start:
+   203 000001B0 66B82000                	mov ax, SysDataSelector						; 세그먼트 초기화
+   204 000001B4 8ED8                    	mov ds, ax
+   205 000001B6 8EC0                    	mov es, ax
+   206 000001B8 8EE0                    	mov fs, ax
+   207 000001BA 8EE8                    	mov gs, ax
+   208 000001BC 8ED0                    	mov ss, ax
+   209                                  
+   210 000001BE BC007C0000              	mov esp, 0x7c00								; 임시 스택 초기화
+   211                                  
+   212                                  	; IA-32 모드 지원 여부 확인
+   213 000001C3 B801000080              	mov eax, 0x80000001
+   214 000001C8 0FA2                    	cpuid
+   215 000001CA F7C200000020            	test edx, 0x20000000
+   216 000001D0 7505                    	jnz IA32_sucs
+   217                                  
+   218 000001D2 E9B6010000              	jmp ErrorInProtected
+   219                                  IA32_sucs:
+   220                                  
+   221                                  	; 메모리 체크
+   222 000001D7 0F20C0                  	mov eax, cr0
+   223 000001DA 50                      	push eax
+   224 000001DB 0D00000060              	or eax, 0x60000000
+   225 000001E0 0F22C0                  	mov cr0, eax								; 캐시 비활성화
+   226                                  
+   227 000001E3 BB00001000              	mov ebx, 0x100000
+   228                                  mem_loop:
+   229 000001E8 E81E000000              	call mem_sub
+   230 000001ED 723C                    	jc mem_error
+   231 000001EF 81C300001000            	add ebx, 0x100000
+   232 000001F5 81FB00000004            	cmp ebx, MINIMAL_MEMORY
+   233 000001FB 72EB                    	jb mem_loop
+   234                                  
+   235 000001FD BBFCFFFF03              	mov ebx, MINIMAL_MEMORY - 4
+   236 00000202 E804000000              	call mem_sub
+   237 00000207 7222                    	jc mem_error
+   238                                  
+   239 00000209 EB25                    	jmp mem_sucs
+   240                                  
+   241                                  mem_sub:
+   242 0000020B C703CDAB3412            	mov dword [ebx], 0x1234abcd
+   243 00000211 8333FF                  	xor dword [ebx], 0xffffffff
+   244 00000214 813B3254CBED            	cmp dword [ebx], ~0x1234abcd
+   245 0000021A 750D                    	jne mem_sub_fail
+   246 0000021C 8333FF                  	xor dword [ebx], 0xffffffff
+   247 0000021F 813BCDAB3412            	cmp dword [ebx], 0x1234abcd
+   248 00000225 7502                    	jne mem_sub_fail
+   249 00000227 F8                      	clc
+   250 00000228 C3                      	ret
+   251                                  mem_sub_fail:
+   252 00000229 F9                      	stc
+   253 0000022A C3                      	ret
+   254                                  
+   255                                  mem_error:
+   256 0000022B E95D010000              	jmp ErrorInProtected
+   257                                  
+   258                                  mem_sucs:
+   259                                  
+   260                                  	; 데이터 복사
+   261 00000230 BE007C0000              	mov esi, 0x7c00								; 플로피 디스크의 위치 (부트섹터+읽은 데이터)
+   262 00000235 BF00001000              	mov edi, FLOPPY_CPY_ADD						; 복사할 곳
+   263 0000023A B900D80000              	mov ecx, READ_CYLINDERS * 512 * 18 * 2		; 복사할 양 계산
+   264 0000023F E832010000              	call memcpy									; copy!
+   265                                  
+   266 00000244 BE[1B880F00]            	mov esi, FLOPPY_CPY_ADD + 0x4200 + C_Kernel - KERNEL_ADDR	; C언어 커널 복사
+   267 00000249 BF00005000              	mov edi, KERNEL_CPY_ADD						; 복사할 곳
+   268 0000024E B900700800              	mov ecx, KERNEL_SIZE						; 복사할 양
+   269 00000253 E81E010000              	call memcpy									; copy!
+   270                                  
+   271 00000258 BE00700000              	mov esi, BOOT_INFO
+   272 0000025D BF00802600              	mov edi, BOOT_INFO_CPY_ADD
+   273 00000262 B914000000              	mov ecx, BOOT_INFO_SIZE
+   274 00000267 E80A010000              	call memcpy
+   275                                  
+   276                                  	; Page Table 생성
+   277 0000026C BF00006000              	mov edi, PAGE_PML4_ADDR					; PML4
+   278 00000271 B900100000              	mov ecx, 0x1000
+   279 00000276 B000                    	mov al, 0
+   280 00000278 E8FF000000              	call memset
+   281                                  												; A=0, PCD=0, PWT=0, U/S=0, R/W=1, P=1
+   282 0000027D C70500006000031060-     	mov dword [PAGE_PML4_ADDR], PAGE_DIRPTR_ADDR | 000011b
+   283 00000286 00                 
+   284 00000287 C70504006000000000-     	mov dword [PAGE_PML4_ADDR+4], 0				; EXB=0, rsrv
+   285 00000290 00                 
+   286                                  
+   287 00000291 BF00106000              	mov edi, PAGE_DIRPTR_ADDR				; Directory Pointer
+   288 00000296 B900100000              	mov ecx, 0x1000
+   289 0000029B B000                    	mov al, 0
+   290 0000029D E8DA000000              	call memset
+   291                                  
+   292 000002A2 B800000000              	mov eax, 0
+   293 000002A7 BB00000000              	mov ebx, 0
+   294                                  PageDirPtrLoop:
+   295 000002AC C78300106000002060-     	mov dword [PAGE_DIRPTR_ADDR + ebx], PAGE_DIRECTORY_ADDR
+   296 000002B5 00                 
+   297 000002B6 018300106000            	add dword [PAGE_DIRPTR_ADDR + ebx], eax
+   298 000002BC 838B0010600003          	or dword [PAGE_DIRPTR_ADDR + ebx], 000011b	; A=0, PCD=0, PWT=0, U/S=0, R/W=1, P=1
+   299 000002C3 C78304106000000000-     	mov dword [PAGE_DIRPTR_ADDR + ebx +4], 0	; EXB=0, rsrv
+   300 000002CC 00                 
+   301 000002CD 0500100000              	add eax, 0x1000
+   302 000002D2 83C308                  	add ebx, 8
+   303 000002D5 83FB20                  	cmp ebx, 8 * PAGE_DIRPTR_ENTRY_COUNT
+   304 000002D8 72D2                    	jb PageDirPtrLoop
+   305                                  
+   306                                  
+   307 000002DA BF00206000              	mov edi, PAGE_DIRECTORY_ADDR			; Directory
+   308 000002DF B900100000              	mov ecx, 0x1000
+   309 000002E4 B000                    	mov al, 0
+   310 000002E6 E891000000              	call memset
+   311                                  
+   312 000002EB B800000000              	mov eax, 0								; Directory Loop...
+   313 000002F0 BB00000000              	mov ebx, 0
+   314 000002F5 BA00000000              	mov edx, 0
+   315                                  PageDirLoop:
+   316 000002FA 898300206000            	mov dword [PAGE_DIRECTORY_ADDR + ebx], eax		; PAT=0, G=0, PS=1, D=0,
+   317 00000300 818B00206000830000-     	or dword [PAGE_DIRECTORY_ADDR + ebx], 10000011b	; A=0, PCD=0, PWT=0, U/S=0, R/W=1, P=1
+   318 00000309 00                 
+   319 0000030A 899304206000            	mov dword [PAGE_DIRECTORY_ADDR + ebx +4], edx	; EXB=0, rsrv
+   320                                  
+   321 00000310 83C308                  	add ebx, 8
+   322 00000313 0500002000              	add eax, 0x200000							; ebx += 2MB;
+   323 00000318 83D200                  	adc edx, 0
+   324 0000031B 81FB00400000            	cmp ebx, 512 * PAGE_DIRPTR_ENTRY_COUNT * 8	; 루프 PAGE_DIRPTR_ENTRY_COUNT회 수행
+   325 00000321 72D7                    	jb PageDirLoop
+   326                                  
+   327                                  	; IA-32 Mode로 전환
+   328 00000323 0F20E0                  	mov eax, cr4
+   329 00000326 83C820                  	or eax, 0x00000020							; PAE=1
+   330 00000329 0F22E0                  	mov cr4, eax
+   331                                  
+   332 0000032C B800006000              	mov eax, PAGE_PML4_ADDR						; PCD=0, PWT=0
+   333 00000331 0F22D8                  	mov cr3, eax
+   334                                  
+   335 00000334 B9800000C0              	mov ecx, 0xC0000080
+   336 00000339 0F32                    	rdmsr
+   337 0000033B 0D00010000              	or eax, 0x0100								; LMA=1
+   338 00000340 0F30                    	wrmsr
+   339                                  
+   340 00000342 0F20C0                  	mov eax, cr0
+   341 00000345 0D00000080              	or eax, 0x80000000							; PG=1
+   342 0000034A 25FFFFFF9F              	and eax, ~0x60000000						; CD=0, NW=0
+   343 0000034F 0F22C0                  	mov cr0, eax
+   344                                  
+   345 00000352 EA[59030000]0800        	jmp SysIA32CodeSelector:IA32_Start
+   346                                  
+   347                                  IA32_Start:
+   348 00000359 66B81000                	mov ax, SysIA32DataSelector					; 세그먼트 초기화
+   349 0000035D 8ED8                    	mov ds, ax
+   350 0000035F 8EC0                    	mov es, ax
+   351 00000361 8EE0                    	mov fs, ax
+   352 00000363 8EE8                    	mov gs, ax
+   353 00000365 8ED0                    	mov ss, ax
+   354                                  
+   355 00000367 BC00005000              	mov esp, KERNEL_STACK						; 스택을 KERNEL_STACK으로 설정
+   356 0000036C BD00005000              	mov ebp, KERNEL_STACK
+   357                                  
+   358 00000371 E9(00005000)            	jmp KERNEL_CPY_ADD							; 커널로 점프
+   359                                  
+   360                                  ;-----------;
+   361                                  ; Functions ;
+   362                                  ;-----------;
+   363                                  memcpy:			; 메모리 복사 함수. ds:esi=복사할 데이터 주소, es:edi=복사될 주소, ecx=크기(byte)
+   364 00000376 60                      	pushad										; 모든 범용 레지스터 및 일부 인덱스 레지스터 push
+   365                                  
+   366 00000377 FC                      	cld											; 방향 플래그(DF) = 0 -> 문자열 명령어 실행시 edi, esi 증가
+   367 00000378 F3A4                    	rep movsb									; 복사
+   368                                  												; rep = ecx가 0일 때까지 명령어를 반복(한번 반복할 때마다 ecx감소)
+   369                                  												; movsb = mov의 바이트 문자열 명령어, mov byte [es:edi], [ds:esi]
+   370                                  												; 바이트 문자열 명령어이므로 실행후 edi, esi 1증가
+   371                                  
+   372 0000037A 61                      	popad										; 모든 범용 레지스터 및 일부 인덱스 레지스터 pop
+   373 0000037B C3                      	ret											; return;
+   374                                  
+   375                                  memset:			; 메모리 설정 함수. es:edi=설정할 데이터 주소, al=설정할 값, ecx=크기(byte)
+   376 0000037C 60                      	pushad										; 모든 범용 레지스터 및 일부 인덱스 레지스터 push
+   377                                  
+   378 0000037D FC                      	cld											; 방향 플래그(DF) = 0 -> 문자열 명령어 실행시 edi 증가
+   379 0000037E F3AA                    	rep stosb									; 설정
+   380                                  												; rep = ecx가 0일 때까지 명령어를 반복(한번 반복할 때마다 ecx감소)
+   381                                  												; stosb = mov byte [es:edi], al
+   382                                  												; 바이트 문자열 명령어이므로 실행후 edi 1증가
+   383                                  
+   384 00000380 61                      	popad										; 모든 범용 레지스터 및 일부 인덱스 레지스터 pop
+   385 00000381 C3                      	ret											; return;
+   386                                  
+   387                                  waitkbdout:		; 키보드 컨트룰러 대기 함수
+   388 00000382 50                      	push eax									; 사용하는 레지스터(eax) push
+   389                                  
+   390                                  wait_loop:
+   391 00000383 E464                    	in al, 0x64									; 키보드 컨트룰러 상태 in
+   392 00000385 2402                    	and al, 0x2									; 만일 준비가 안 돼있으면 2번째 bit가 0이 됨(따라서 ZF=1)
+   393 00000387 E460                    	in al, 0x60									; 키보드 컨트룰러의 버퍼를 비움
+   394 00000389 75F8                    	jnz wait_loop								; ZF=0(키보드 컨트룰러가 준비가 안 돼면 루프를 돔
+   395                                  
+   396 0000038B 58                      	pop eax										; 사용하는 레지스터(eax) pop
+   397 0000038C C3                      	ret
+   398                                  
+   399                                  ErrorInProtected:
+   400 0000038D BE[BB030000]            	mov esi, X_err_bit
+   401 00000392 B905000000              	mov ecx, 5
+   402 00000397 B805000000              	mov eax, 5
+   403                                  
+   404 0000039C 8B3D0C700000            	mov edi, [BOOT_INFO + VIDEO_MEMORY]
+   405 000003A2 8B1504700000            	mov edx, [BOOT_INFO + SCREEN_X]
+   406 000003A8 D1E2                    	shl edx, 1
+   407                                  
+   408 000003AA D1E1                    	shl ecx, 1
+   409                                  ErrorInProtected_putloop:
+   410 000003AC E8C5FFFFFF              	call memcpy
+   411 000003B1 01CE                    	add esi, ecx
+   412 000003B3 01D7                    	add edi, edx
+   413 000003B5 48                      	dec eax
+   414 000003B6 75F4                    	jnz ErrorInProtected_putloop
+   415                                  ErrorInProtected_stop:
+   416 000003B8 F4                      	hlt
+   417 000003B9 EBFD                    	jmp ErrorInProtected_stop
+   418                                  
+   419                                  X_err_bit:
+   420 000003BB FF7F000000000000FF-     	dw 0x7fff, 0x0000, 0x0000, 0x0000, 0x7fff
+   421 000003C4 7F                 
+   422 000003C5 0000FF7F0000FF7F00-     	dw 0x0000, 0x7fff, 0x0000, 0x7fff, 0x0000
+   423 000003CE 00                 
+   424 000003CF 00000000FF7F000000-     	dw 0x0000, 0x0000, 0x7fff, 0x0000, 0x0000
+   425 000003D8 00                 
+   426 000003D9 0000FF7F0000FF7F00-     	dw 0x0000, 0x7fff, 0x0000, 0x7fff, 0x0000
+   427 000003E2 00                 
+   428 000003E3 FF7F000000000000FF-     	dw 0x7fff, 0x0000, 0x0000, 0x0000, 0x7fff
+   429 000003EC 7F                 
+   430                                  
+   431                                  
+   432                                  ;-----------;
+   433                                  ; GDT Table ;
+   434                                  ;-----------;
+   435                                  gdtr:
+   436 000003ED 2700                    	dw gdt_end - gdt - 1						; GDT의 크기
+   437 000003EF [F3030000]              	dd gdt										; GDT의 시작 주소
+   438                                  
+   439                                  gdt:											; GDT의 시작
+   440                                  
+   441                                  NullSelector equ (0 * 8)						; 예약된 NULL 디스크럽터
+   442 000003F3 0000                    	dw 0										; 전부 0
+   443 000003F5 0000                    	dw 0
+   444 000003F7 00                      	db 0
+   445 000003F8 00                      	db 0
+   446 000003F9 00                      	db 0
+   447 000003FA 00                      	db 0
+   448                                  
+   449                                  SysIA32CodeSelector equ (1 * 8)				; IA-32모드 코드 세그먼트 디스크립터
+   450 000003FB FFFF                    	dw 0xffff									; Limit 0~15 bit = 0xffff
+   451 000003FD 0000                    	dw 0										; Base 0~15 bit = 0
+   452 000003FF 00                      	db 0										; Base 16~23 bit = 0
+   453 00000400 9A                      	db 10011010b								; P=1, DPL=0, Code, non-conforming, readable
+   454 00000401 AF                      	db 10101111b								; G=1, D=0, L=1, Limit 16~19 bit = 0xf (Limit = 0xfffff)
+   455 00000402 00                      	db 0
+   456                                  
+   457                                  SysIA32DataSelector equ (2 * 8)				; IA-32모드 데이터 세그먼트 디스크립터
+   458 00000403 FFFF                    	dw 0xffff									; Limit 0~15 bit = 0xffff
+   459 00000405 0000                    	dw 0										; Base 0~15 bit = 0
+   460 00000407 00                      	db 0										; Base 16~23 bit = 0
+   461 00000408 92                      	db 10010010b								; P=1, DPL=0, Code, non-conforming, readable
+   462 00000409 AF                      	db 10101111b								; G=1, D=0, L=1, Limit 16~19 bit = 0xf (Limit = 0xfffff)
+   463 0000040A 00                      	db 0
+   464                                  
+   465                                  SysCodeSelector equ (3 * 8)					; 코드 세그먼트 디스크럽터
+   466 0000040B FFFF                    	dw 0xffff									; Limit 0~15 bit = 0xffff
+   467 0000040D 0000                    	dw 0										; Base 0~15 bit = 0
+   468 0000040F 00                      	db 0										; Base 16~23 bit = 0
+   469 00000410 9A                      	db 10011010b								; P=1, DPL=0, Code, non-conforming, readable
+   470 00000411 CF                      	db 11001111b								; G=1, D=1, Limit 16~19 bit = 0xf (Limit = 0xfffff)
+   471 00000412 00                      	db 0										; Base 24~32 bit = 0 (Base = 0)
+   472                                  
+   473                                  SysDataSelector equ (4 * 8)					; 데이터 세그먼트 디스크럽터
+   474 00000413 FFFF                    	dw 0xffff									; Limit 0~15bit = 0xffff
+   475 00000415 0000                    	dw 0										; Base 0~15 bit = 0
+   476 00000417 00                      	db 0										; Base 16~23 bit = 0
+   477 00000418 92                      	db 10010010b								; P=1, DPL=0, Data, expand-up, writable
+   478 00000419 CF                      	db 11001111b								; G=1, D=1, Limit 16~19 bit = 0xf (Limit = 0xfffff)
+   479 0000041A 00                      	db 0										; Base 24~32 bit = 0 (Base = 0)
+   480                                  
+   481                                  gdt_end:										; GDT의 끝 + 1
+   482                                  
+   483                                  C_Kernel:										; C언어로 만든 커널의 시작

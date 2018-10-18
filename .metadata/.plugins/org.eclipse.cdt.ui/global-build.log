@@ -1,0 +1,2426 @@
+10:29:55 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:30:11 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+make: Nothing to be done for 'all'.
+10:31:44 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+make: Nothing to be done for 'all'.
+10:34:14 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:36:15 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+../BinaryScreen.cpp: In function 'int main()':
+../BinaryScreen.cpp:9:8: warning: unused variable 'ptr' [-Wunused-variable]
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:37:23 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:38:19 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:38:21 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+10:39:12 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:39:14 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+10:41:14 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:41:16 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+10:43:36 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+Building file: ../BinaryScreen.cpp
+Invoking: Cygwin C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"BinaryScreen.d" -MT"BinaryScreen.d" -o "BinaryScreen.o" "../BinaryScreen.cpp"
+Finished building: ../BinaryScreen.cpp
+ 
+Building target: BinaryScreen.exe
+Invoking: Cygwin C++ Linker
+g++  -o "BinaryScreen.exe"  ./BinaryScreen.o ./EnglishFont.o   
+Finished building target: BinaryScreen.exe
+ 
+10:49:49 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+make: Nothing to be done for 'all'.
+10:49:49 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+nasm -f bin -o tmp/Startup.bin -l tmp/Startup.lst Startup.S
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+Startup.S:353: warning: byte data exceeds bounds
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+10:52:12 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+nasm -f bin -o tmp/Startup.bin -l tmp/Startup.lst Startup.S
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+10:52:58 **** Incremental Build of configuration Debug for project BinaryScreen ****
+make all 
+make: Nothing to be done for 'all'.
+10:52:58 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+nasm -f bin -o bin/bootsector.bin -l tmp/bootsector.lst bootsector.asm
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+nasm -f bin -o tmp/Startup.bin -l tmp/Startup.lst Startup.S
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+13:10:43 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:24:52 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:25:10 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:25:22 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:26:10 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+18:44:51 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+14:31:54 **** Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/sprintf.o -c sprintf.c
+sprintf.c:7:19: fatal error: ctype.h: No such file or directory
+makefile:32: recipe for target 'tmp/sprintf.o' failed
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+makefile:16: recipe for target 'all' failed
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+makefile:15: recipe for target 'all' failed
+compilation terminated.
+make[2]: *** [tmp/sprintf.o] Error 1
+make[1]: *** [all] Error 2
+make: *** [all] Error 2
+14:36:14 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/sprintf.o -c sprintf.c
+sprintf.c: In function 'my_vsprintf':
+sprintf.c:68:4: warning: implicit declaration of function 'isdigit' [-Wimplicit-function-declaration]
+sprintf.c:133:5: warning: implicit declaration of function 'strnlen' [-Wimplicit-function-declaration]
+sprintf.c:218:12: warning: 'short int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:218:12: note: (so you should pass 'int' not 'short int' to 'va_arg')
+sprintf.c:218:12: note: if this code is reached, the program will abort
+sprintf.c:220:12: warning: 'short unsigned int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:220:12: note: if this code is reached, the program will abort
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a   tmp/strrev.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -I ../libClc1Share -MM Memory.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -I ../libClc1Share -o tmp/Main.o -c Main.c
+x86_64-pc-linux-objdump -M intel -D tmp/Main.o > tmp/Main_dump.txt
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o      tmp/Memory.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+tmp/Graphic.o: In function `DrawStringFormat':
+Graphic.c:(.text+0x2d7): undefined reference to `vsprintf'
+makefile:39: recipe for target 'tmp/C_Kernel.bin' failed
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: *** [tmp/C_Kernel.bin] Error 1
+makefile:24: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+14:36:40 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/sprintf.o -c sprintf.c
+sprintf.c: In function 'vsprintf':
+sprintf.c:68:4: warning: implicit declaration of function 'isdigit' [-Wimplicit-function-declaration]
+sprintf.c:133:5: warning: implicit declaration of function 'strnlen' [-Wimplicit-function-declaration]
+sprintf.c: In function 'sprintf':
+sprintf.c:363:2: warning: implicit declaration of function 'my_vsprintf' [-Wimplicit-function-declaration]
+sprintf.c: In function 'vsprintf':
+sprintf.c:218:12: warning: 'short int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:218:12: note: (so you should pass 'int' not 'short int' to 'va_arg')
+sprintf.c:218:12: note: if this code is reached, the program will abort
+sprintf.c:220:12: warning: 'short unsigned int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:220:12: note: if this code is reached, the program will abort
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a   tmp/strrev.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o      tmp/Memory.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+../libClc1Share/bin/libClc1Share.a(sprintf.o): In function `vsprintf':
+sprintf.c:(.text+0x57f): undefined reference to `isdigit'
+sprintf.c:(.text+0x723): undefined reference to `strnlen'
+sprintf.c:(.text+0xaff): undefined reference to `isdigit'
+sprintf.c:(.text+0xb21): undefined reference to `isdigit'
+sprintf.c:(.text+0xc89): undefined reference to `isdigit'
+../libClc1Share/bin/libClc1Share.a(sprintf.o): In function `sprintf':
+sprintf.c:(.text+0xe75): undefined reference to `my_vsprintf'
+makefile:39: recipe for target 'tmp/C_Kernel.bin' failed
+make[2]: *** [tmp/C_Kernel.bin] Error 1
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+makefile:24: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+14:37:12 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+sprintf.c:8:25: fatal error: clc1_ctypes.h: No such file or directory
+compilation terminated.
+make[1]: *** [tmp/Dependency.dep] Error 1
+makefile:28: recipe for target 'tmp/Dependency.dep' failed
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+14:37:23 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+sprintf.c:9:25: fatal error: clc1_ctypes.h: No such file or directory
+compilation terminated.
+makefile:28: recipe for target 'tmp/Dependency.dep' failed
+make[1]: *** [tmp/Dependency.dep] Error 1
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+14:37:42 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/sprintf.o -c sprintf.c
+sprintf.c: In function 'vsprintf':
+sprintf.c:135:5: warning: implicit declaration of function 'strnlen' [-Wimplicit-function-declaration]
+sprintf.c: In function 'sprintf':
+sprintf.c:365:2: warning: implicit declaration of function 'my_vsprintf' [-Wimplicit-function-declaration]
+sprintf.c: In function 'vsprintf':
+sprintf.c:220:12: warning: 'short int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:220:12: note: (so you should pass 'int' not 'short int' to 'va_arg')
+sprintf.c:220:12: note: if this code is reached, the program will abort
+sprintf.c:222:12: warning: 'short unsigned int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:222:12: note: if this code is reached, the program will abort
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a   tmp/strrev.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o      tmp/Memory.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+../libClc1Share/bin/libClc1Share.a(sprintf.o): In function `vsprintf':
+sprintf.c:(.text+0x757): undefined reference to `strnlen'
+../libClc1Share/bin/libClc1Share.a(sprintf.o): In function `sprintf':
+sprintf.c:(.text+0xe55): undefined reference to `my_vsprintf'
+makefile:39: recipe for target 'tmp/C_Kernel.bin' failed
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+makefile:24: recipe for target 'all' failed
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: *** [tmp/C_Kernel.bin] Error 1
+make[1]: *** [all] Error 2
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+14:46:20 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c strnlen.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/strnlen.o -c strnlen.c
+x86_64-pc-linux-objdump -M intel -D tmp/strnlen.o > tmp/strnlen_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/strcpy.o -c strcpy.c
+x86_64-pc-linux-objdump -M intel -D tmp/strcpy.o > tmp/strcpy_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/strlen.o -c strlen.c
+x86_64-pc-linux-objdump -M intel -D tmp/strlen.o > tmp/strlen_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/sprintf.o -c sprintf.c
+sprintf.c: In function 'vsprintf':
+sprintf.c:221:12: warning: 'short int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:221:12: note: (so you should pass 'int' not 'short int' to 'va_arg')
+sprintf.c:221:12: note: if this code is reached, the program will abort
+sprintf.c:223:12: warning: 'short unsigned int' is promoted to 'int' when passed through '...' [enabled by default]
+sprintf.c:223:12: note: if this code is reached, the program will abort
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a   tmp/strrev.o  tmp/strnlen.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o      tmp/Memory.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+x86_64-pc-linux-objcopy -R .note -R .comment -R .absolut \
+	-S -O binary \
+	tmp/C_Kernel.exe tmp/C_Kernel.bin
+x86_64-pc-linux-nm --line-numbers tmp/C_Kernel.exe | sort > tmp/C_Kernel_nm.txt
+ndisasm -b 64 tmp/C_Kernel.bin > tmp/C_Kernel_disasm.txt
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+14:47:57 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c strnlen.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99  -o tmp/sprintf.o -c sprintf.c
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a   tmp/strrev.o  tmp/strnlen.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+19:46:30 **** Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o   tmp/Interrupt.o     tmp/Gdt.o  tmp/Idt.o  tmp/Memory.o  tmp/Interrupt.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+tmp/Interrupt.o: In function `_DefaultHandler':
+Interrupt.c:(.text+0x0): multiple definition of `_DefaultHandler'
+tmp/Interrupt.o:Interrupt.c:(.text+0x0): first defined here
+tmp/Main.o: In function `ClcMain':
+Main.c:(.text+0x72): undefined reference to `DefaultHandler'
+makefile:40: recipe for target 'tmp/C_Kernel.bin' failed
+make[2]: *** [tmp/C_Kernel.bin] Error 1
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+makefile:25: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+20:37:59 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c strnlen.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+nasm -f elf64  -o tmp/memset_2.o -l tmp/memset_2.lst memset_2.asm
+nasm -f elf64  -o tmp/memset.o -l tmp/memset.lst memset.asm
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strrev.o -c strrev.c
+x86_64-pc-linux-objdump -M intel -D tmp/strrev.o > tmp/strrev_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strnlen.o -c strnlen.c
+x86_64-pc-linux-objdump -M intel -D tmp/strnlen.o > tmp/strnlen_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/itoa.o -c itoa.c
+x86_64-pc-linux-objdump -M intel -D tmp/itoa.o > tmp/itoa_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strcpy.o -c strcpy.c
+x86_64-pc-linux-objdump -M intel -D tmp/strcpy.o > tmp/strcpy_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strlen.o -c strlen.c
+x86_64-pc-linux-objdump -M intel -D tmp/strlen.o > tmp/strlen_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/sprintf.o -c sprintf.c
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a  tmp/memset_2.o  tmp/memset.o  tmp/strrev.o  tmp/strnlen.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+nasm -f bin -o bin/bootsector.bin -l tmp/bootsector.lst bootsector.asm
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+nasm -f bin -o tmp/Startup.bin -l tmp/Startup.lst Startup.S
+nasm -f elf64  -o tmp/InterruptAsm.o -l tmp/InterruptAsm.lst InterruptAsm.asm
+nasm -f elf64  -o tmp/AsmFunc.o -l tmp/AsmFunc.lst AsmFunc.asm
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Gdt.o -c Gdt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Gdt.o > tmp/Gdt_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Idt.o -c Idt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Idt.o > tmp/Idt_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Memory.o -c Memory.c
+x86_64-pc-linux-objdump -M intel -D tmp/Memory.o > tmp/Memory_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Interrupt.o -c Interrupt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Interrupt.o > tmp/Interrupt_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Main.o -c Main.c
+x86_64-pc-linux-objdump -M intel -D tmp/Main.o > tmp/Main_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/EnglishFont.o -c EnglishFont.c
+x86_64-pc-linux-objdump -M intel -D tmp/EnglishFont.o > tmp/EnglishFont_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Graphic.o -c Graphic.c
+Graphic.c: In function 'DrawBoxFill':
+Graphic.c:15:3: warning: implicit declaration of function 'memset_2' [-Wimplicit-function-declaration]
+x86_64-pc-linux-objdump -M intel -D tmp/Graphic.o > tmp/Graphic_dump.txt
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o   tmp/InterruptAsm.o     tmp/Gdt.o  tmp/Idt.o  tmp/Memory.o  tmp/Interrupt.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+x86_64-pc-linux-objcopy -R .note -R .comment -R .absolut \
+	-S -O binary \
+	tmp/C_Kernel.exe tmp/C_Kernel.bin
+x86_64-pc-linux-nm --line-numbers tmp/C_Kernel.exe | sort > tmp/C_Kernel_nm.txt
+ndisasm -b 64 tmp/C_Kernel.bin > tmp/C_Kernel_disasm.txt
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+18:23:37 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r tmp/Dependency.dep
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'tmp/Dependency.dep' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Idt.o -c Idt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Idt.o > tmp/Idt_dump.txt
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o   tmp/InterruptAsm.o     tmp/Gdt.o  tmp/Idt.o  tmp/Memory.o  tmp/Interrupt.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+x86_64-pc-linux-objcopy -R .note -R .comment -R .absolut \
+	-S -O binary \
+	tmp/C_Kernel.exe tmp/C_Kernel.bin
+x86_64-pc-linux-nm --line-numbers tmp/C_Kernel.exe | sort > tmp/C_Kernel_nm.txt
+ndisasm -b 64 tmp/C_Kernel.bin > tmp/C_Kernel_disasm.txt
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:37:04 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Main.o -c Main.c
+Main.c: In function 'ClcMain':
+Main.c:36:48: error: expected expression before ')' token
+makefile:55: recipe for target 'tmp/Main.o' failed
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: *** [tmp/Main.o] Error 1
+makefile:25: recipe for target 'all' failed
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: *** [all] Error 2
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+17:38:25 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Main.o -c Main.c
+Main.c: In function 'ClcMain':
+Main.c:36:49: error: expected expression before ')' token
+makefile:55: recipe for target 'tmp/Main.o' failed
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: *** [tmp/Main.o] Error 1
+makefile:25: recipe for target 'all' failed
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: *** [all] Error 2
+makefile:15: recipe for target 'all' failed
+make: *** [all] Error 2
+17:39:02 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Main.o -c Main.c
+Main.c: In function 'ClcMain':
+Main.c:36:2: warning: left shift count >= width of type [enabled by default]
+x86_64-pc-linux-objdump -M intel -D tmp/Main.o > tmp/Main_dump.txt
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o   tmp/InterruptAsm.o     tmp/Gdt.o  tmp/Idt.o  tmp/Memory.o  tmp/Interrupt.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+x86_64-pc-linux-objcopy -R .note -R .comment -R .absolut \
+	-S -O binary \
+	tmp/C_Kernel.exe tmp/C_Kernel.bin
+x86_64-pc-linux-nm --line-numbers tmp/C_Kernel.exe | sort > tmp/C_Kernel_nm.txt
+ndisasm -b 64 tmp/C_Kernel.bin > tmp/C_Kernel_disasm.txt
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:40:25 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Main.o -c Main.c
+x86_64-pc-linux-objdump -M intel -D tmp/Main.o > tmp/Main_dump.txt
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o   tmp/InterruptAsm.o     tmp/Gdt.o  tmp/Idt.o  tmp/Memory.o  tmp/Interrupt.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+x86_64-pc-linux-objcopy -R .note -R .comment -R .absolut \
+	-S -O binary \
+	tmp/C_Kernel.exe tmp/C_Kernel.bin
+x86_64-pc-linux-nm --line-numbers tmp/C_Kernel.exe | sort > tmp/C_Kernel_nm.txt
+ndisasm -b 64 tmp/C_Kernel.bin > tmp/C_Kernel_disasm.txt
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:41:07 **** Clean-only build of configuration Default for project Clubcos1 ****
+make clean 
+rm parport.out
+rm bochsout.txt
+rm gdb.exe.coredump
+rm: cannot remove `gdb.exe.coredump': No such file or directory
+make: [clean] Error 1 (ignored)
+makefile:41: recipe for target 'clean' failed
+make clean -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+rm tmp/*
+rm bin/*
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make clean -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+rm bin/*
+rm tmp/*
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make clean -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+rm tmp/*
+rm bin/*
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+17:41:41 **** Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+x86_64-pc-linux-gcc -MM strrev.c strnlen.c itoa.c strcpy.c strlen.c sprintf.c > tmp/Dependency.dep
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+nasm -f elf64  -o tmp/memset_2.o -l tmp/memset_2.lst memset_2.asm
+nasm -f elf64  -o tmp/memset.o -l tmp/memset.lst memset.asm
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strrev.o -c strrev.c
+x86_64-pc-linux-objdump -M intel -D tmp/strrev.o > tmp/strrev_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strnlen.o -c strnlen.c
+x86_64-pc-linux-objdump -M intel -D tmp/strnlen.o > tmp/strnlen_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/itoa.o -c itoa.c
+x86_64-pc-linux-objdump -M intel -D tmp/itoa.o > tmp/itoa_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strcpy.o -c strcpy.c
+x86_64-pc-linux-objdump -M intel -D tmp/strcpy.o > tmp/strcpy_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/strlen.o -c strlen.c
+x86_64-pc-linux-objdump -M intel -D tmp/strlen.o > tmp/strlen_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow  -o tmp/sprintf.o -c sprintf.c
+x86_64-pc-linux-objdump -M intel -D tmp/sprintf.o > tmp/sprintf_dump.txt
+x86_64-pc-linux-ar rcs bin/libClc1Share.a  tmp/memset_2.o  tmp/memset.o  tmp/strrev.o  tmp/strnlen.o  tmp/itoa.o  tmp/strcpy.o  tmp/strlen.o  tmp/sprintf.o
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+nasm -f bin -o bin/bootsector.bin -l tmp/bootsector.lst bootsector.asm
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -MM Gdt.c Idt.c Memory.c Interrupt.c Main.c EnglishFont.c Graphic.c > tmp/Dependency.dep
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+nasm -f bin -o tmp/Startup.bin -l tmp/Startup.lst Startup.S
+nasm -f elf64  -o tmp/InterruptAsm.o -l tmp/InterruptAsm.lst InterruptAsm.asm
+nasm -f elf64  -o tmp/AsmFunc.o -l tmp/AsmFunc.lst AsmFunc.asm
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Gdt.o -c Gdt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Gdt.o > tmp/Gdt_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Idt.o -c Idt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Idt.o > tmp/Idt_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Memory.o -c Memory.c
+x86_64-pc-linux-objdump -M intel -D tmp/Memory.o > tmp/Memory_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Interrupt.o -c Interrupt.c
+x86_64-pc-linux-objdump -M intel -D tmp/Interrupt.o > tmp/Interrupt_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Main.o -c Main.c
+x86_64-pc-linux-objdump -M intel -D tmp/Main.o > tmp/Main_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/EnglishFont.o -c EnglishFont.c
+x86_64-pc-linux-objdump -M intel -D tmp/EnglishFont.o > tmp/EnglishFont_dump.txt
+x86_64-pc-linux-gcc -O3 -m64 -ffreestanding -std=gnu99 -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow -I ../libClc1Share -o tmp/Graphic.o -c Graphic.c
+x86_64-pc-linux-objdump -M intel -D tmp/Graphic.o > tmp/Graphic_dump.txt
+x86_64-pc-linux-ld -melf_x86_64 -T elf_x86_64.x -nostdlib -Ttext 0x500000 -e ClcEntry \
+	 -o tmp/C_Kernel.exe\
+	-Map tmp/C_Kernel.map \
+	tmp/AsmFunc.o   tmp/InterruptAsm.o     tmp/Gdt.o  tmp/Idt.o  tmp/Memory.o  tmp/Interrupt.o  tmp/Main.o  tmp/EnglishFont.o  tmp/Graphic.o \
+	-L ../libClc1Share/bin -l Clc1Share
+x86_64-pc-linux-objcopy -R .note -R .comment -R .absolut \
+	-S -O binary \
+	tmp/C_Kernel.exe tmp/C_Kernel.bin
+x86_64-pc-linux-nm --line-numbers tmp/C_Kernel.exe | sort > tmp/C_Kernel_nm.txt
+ndisasm -b 64 tmp/C_Kernel.bin > tmp/C_Kernel_disasm.txt
+cat tmp/Startup.bin tmp/C_Kernel.bin > bin/Clubcos0.sys
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+z_tools/edimg imgin:z_tools/fdimg0at.tek \
+	wbinimg src:Bootsector/bin/bootsector.bin len:512 from:0 to:0 \
+	copy from:Kernel/bin/Clubcos0.sys to:@: \
+	imgout:floppy.img
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+17:54:15 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'

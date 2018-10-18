@@ -1,0 +1,18 @@
+Memory Map
+
+0x000000 ~ 0x100000 (1MB)		: no use.
+0x100000 ~ 0x268000 (1.44MB)	: Floppy Image
+0x268000 ~ 0x268014 (20byte)	: BootInfo
+0x268014 ~ 0x500000 (´ë·« 2.5MB)	: Kernel Stack
+0x500000 ~ 0x600000 (1MB)		: Kernel
+0x600000 ~ 0x606000	(24KB)		: Kernel Page Table
+0x606000 ~ 0x616000	(64KB)		: GDT
+0x626000 ~ 0x627000	(4KB)		: IDT
+0x627000 ~ 0x727000	(1MB)		: IST Stack
+0x800000 ~ 0x30000000 (3GB)		: Dynamic MRemory Area
+
+Kernel Page Table
+
+0x600000 ~ 0x601000 (4KB)		: PML4 Table (1)
+0x601000 ~ 0x602000 (4KB)		: Page Directory Pointer Table (1)
+0x602000 ~ 0x606000 (16KB)		: Page Directory Table (4)

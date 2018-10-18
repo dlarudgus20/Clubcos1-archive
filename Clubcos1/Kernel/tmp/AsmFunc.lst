@@ -1,0 +1,36 @@
+     1                                  [bits 64]
+     2                                  
+     3                                  [extern ClcMain]
+     4                                  
+     5                                  ; IA-32e 호출규약
+     6                                  ; rdi, rsi, rdx, rcx, r8, r9, 스택
+     7                                  ; 32비트와 삽입 순서 반대
+     8                                  
+     9                                  segment .text
+    10                                  	[global ClcEntry]
+    11                                  	ClcEntry:
+    12 00000000 E8(00000000)            		call ClcMain
+    13                                  
+    14                                  	[global LoadGdt]	; void LoadGdt(uint16_t size, Gdt *addr);
+    15                                  	LoadGdt:
+    16 00000005 66897C24F6              		mov [rsp - 10], di
+    17 0000000A 48897424F8              		mov [rsp - 8], rsi
+    18 0000000F 0F015424F6              		lgdt [rsp - 10]
+    19 00000014 C3                      		ret
+    20                                  
+    21                                  	[global LoadIdt]	; void LoadIdt(uint16_t size, Idt *addr);
+    22                                  	LoadIdt:
+    23 00000015 66897C24F6              		mov [rsp - 10], di
+    24 0000001A 48897424F8              		mov [rsp - 8], rsi
+    25 0000001F 0F015C24F6              		lidt [rsp - 10]
+    26 00000024 C3                      		ret
+    27                                  
+    28                                  	[global GetCr0]		; uintptr_t GetCr0();
+    29                                  	GetCr0:
+    30 00000025 0F20C0                  		mov rax, cr0
+    31 00000028 C3                      		ret
+    32                                  
+    33                                  	[global SetCr0]		; void SetCr0(uintptr_t cr0);
+    34                                  	SetCr0:
+    35 00000029 0F22C7                  		mov cr0, rdi
+    36 0000002C C3                      		ret

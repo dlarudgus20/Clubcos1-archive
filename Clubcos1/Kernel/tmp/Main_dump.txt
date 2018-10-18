@@ -1,0 +1,231 @@
+
+tmp/Main.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <ClcMain>:
+   0:	53                   	push   rbx
+   1:	b9 9a 00 00 00       	mov    ecx,0x9a
+   6:	ba ff ff ff ff       	mov    edx,0xffffffff
+   b:	31 f6                	xor    esi,esi
+   d:	bf 08 60 60 00       	mov    edi,0x606008
+  12:	48 c7 04 25 00 60 60 	mov    QWORD PTR ds:0x606000,0x0
+  19:	00 00 00 00 00 
+  1e:	e8 00 00 00 00       	call   23 <ClcMain+0x23>
+  23:	b9 92 00 00 00       	mov    ecx,0x92
+  28:	ba ff ff ff ff       	mov    edx,0xffffffff
+  2d:	31 f6                	xor    esi,esi
+  2f:	bf 10 60 60 00       	mov    edi,0x606010
+  34:	bb 00 60 62 00       	mov    ebx,0x626000
+  39:	e8 00 00 00 00       	call   3e <ClcMain+0x3e>
+  3e:	ba e7 ff 00 00       	mov    edx,0xffe7
+  43:	31 f6                	xor    esi,esi
+  45:	bf 18 60 60 00       	mov    edi,0x606018
+  4a:	e8 00 00 00 00       	call   4f <ClcMain+0x4f>
+  4f:	be 00 60 60 00       	mov    esi,0x606000
+  54:	bf ff ff 00 00       	mov    edi,0xffff
+  59:	e8 00 00 00 00       	call   5e <ClcMain+0x5e>
+  5e:	45 31 c0             	xor    r8d,r8d
+  61:	31 c9                	xor    ecx,ecx
+  63:	48 89 df             	mov    rdi,rbx
+  66:	41 b9 0e 00 00 00    	mov    r9d,0xe
+  6c:	ba 08 00 00 00       	mov    edx,0x8
+  71:	be 00 00 00 00       	mov    esi,0x0
+  76:	48 83 c3 10          	add    rbx,0x10
+  7a:	e8 00 00 00 00       	call   7f <ClcMain+0x7f>
+  7f:	48 81 fb 00 70 62 00 	cmp    rbx,0x627000
+  86:	75 d6                	jne    5e <ClcMain+0x5e>
+  88:	be 00 60 62 00       	mov    esi,0x626000
+  8d:	bf 00 10 00 00       	mov    edi,0x1000
+  92:	e8 00 00 00 00       	call   97 <ClcMain+0x97>
+  97:	b9 00 00 00 00       	mov    ecx,0x0
+  9c:	ba ff 07 00 00       	mov    edx,0x7ff
+  a1:	be 64 00 00 00       	mov    esi,0x64
+  a6:	31 ff                	xor    edi,edi
+  a8:	e8 00 00 00 00       	call   ad <ClcMain+0xad>
+  ad:	fb                   	sti    
+  ae:	cd 77                	int    0x77
+  b0:	fa                   	cli    
+  b1:	b9 00 00 00 00       	mov    ecx,0x0
+  b6:	ba ff 07 00 00       	mov    edx,0x7ff
+  bb:	be 74 00 00 00       	mov    esi,0x74
+  c0:	31 ff                	xor    edi,edi
+  c2:	e8 00 00 00 00       	call   c7 <ClcMain+0xc7>
+  c7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+  ce:	00 00 
+  d0:	b9 00 00 00 00       	mov    ecx,0x0
+  d5:	ba ff 07 00 00       	mov    edx,0x7ff
+  da:	31 f6                	xor    esi,esi
+  dc:	31 ff                	xor    edi,edi
+  de:	e8 00 00 00 00       	call   e3 <ClcMain+0xe3>
+  e3:	f4                   	hlt    
+  e4:	eb ea                	jmp    d0 <ClcMain+0xd0>
+  e6:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+  ed:	00 00 00 
+
+00000000000000f0 <PrintMemoryEntry>:
+  f0:	8b 04 25 fc 0f 00 00 	mov    eax,DWORD PTR ds:0xffc
+  f7:	85 c0                	test   eax,eax
+  f9:	0f 84 86 00 00 00    	je     185 <PrintMemoryEntry+0x95>
+  ff:	41 57                	push   r15
+ 101:	83 e8 01             	sub    eax,0x1
+ 104:	41 56                	push   r14
+ 106:	4c 8d 74 40 03       	lea    r14,[rax+rax*2+0x3]
+ 10b:	41 55                	push   r13
+ 10d:	49 c1 e6 03          	shl    r14,0x3
+ 111:	41 89 fd             	mov    r13d,edi
+ 114:	41 54                	push   r12
+ 116:	55                   	push   rbp
+ 117:	89 f5                	mov    ebp,esi
+ 119:	53                   	push   rbx
+ 11a:	31 db                	xor    ebx,ebx
+ 11c:	48 83 ec 28          	sub    rsp,0x28
+ 120:	44 8b a3 10 10 00 00 	mov    r12d,DWORD PTR [rbx+0x1010]
+ 127:	44 8b bb 14 10 00 00 	mov    r15d,DWORD PTR [rbx+0x1014]
+ 12e:	44 89 e7             	mov    edi,r12d
+ 131:	e8 00 00 00 00       	call   136 <PrintMemoryEntry+0x46>
+ 136:	4c 8b 83 00 10 00 00 	mov    r8,QWORD PTR [rbx+0x1000]
+ 13d:	89 ee                	mov    esi,ebp
+ 13f:	b9 00 00 00 00       	mov    ecx,0x0
+ 144:	ba ff 07 00 00       	mov    edx,0x7ff
+ 149:	44 89 ef             	mov    edi,r13d
+ 14c:	83 c5 10             	add    ebp,0x10
+ 14f:	4d 89 c1             	mov    r9,r8
+ 152:	4c 03 8b 08 10 00 00 	add    r9,QWORD PTR [rbx+0x1008]
+ 159:	48 89 04 24          	mov    QWORD PTR [rsp],rax
+ 15d:	44 89 7c 24 10       	mov    DWORD PTR [rsp+0x10],r15d
+ 162:	31 c0                	xor    eax,eax
+ 164:	44 89 64 24 08       	mov    DWORD PTR [rsp+0x8],r12d
+ 169:	48 83 c3 18          	add    rbx,0x18
+ 16d:	e8 00 00 00 00       	call   172 <PrintMemoryEntry+0x82>
+ 172:	4c 39 f3             	cmp    rbx,r14
+ 175:	75 a9                	jne    120 <PrintMemoryEntry+0x30>
+ 177:	48 83 c4 28          	add    rsp,0x28
+ 17b:	5b                   	pop    rbx
+ 17c:	5d                   	pop    rbp
+ 17d:	41 5c                	pop    r12
+ 17f:	41 5d                	pop    r13
+ 181:	41 5e                	pop    r14
+ 183:	41 5f                	pop    r15
+ 185:	f3 c3                	repz ret 
+
+Disassembly of section .rodata.str1.1:
+
+0000000000000000 <.rodata.str1.1>:
+   0:	54                   	push   rsp
+   1:	65                   	gs
+   2:	73 74                	jae    78 <ClcMain+0x78>
+   4:	20 49 6e             	and    BYTE PTR [rcx+0x6e],cl
+   7:	74 65                	je     6e <ClcMain+0x6e>
+   9:	72 72                	jb     7d <ClcMain+0x7d>
+   b:	75 70                	jne    7d <ClcMain+0x7d>
+   d:	74 20                	je     2f <.rodata.str1.1+0x2f>
+   f:	53                   	push   rbx
+  10:	74 61                	je     73 <ClcMain+0x73>
+  12:	72 74                	jb     88 <ClcMain+0x88>
+  14:	00 54 65 73          	add    BYTE PTR [rbp+riz*2+0x73],dl
+  18:	74 20                	je     3a <ClcMain+0x3a>
+  1a:	49 6e                	rex.WB outs dx,BYTE PTR ds:[rsi]
+  1c:	74 65                	je     83 <ClcMain+0x83>
+  1e:	72 72                	jb     92 <ClcMain+0x92>
+  20:	75 70                	jne    92 <ClcMain+0x92>
+  22:	74 20                	je     44 <ClcMain+0x44>
+  24:	45 6e                	rex.RB outs dx,BYTE PTR ds:[rsi]
+  26:	64 00 43 6c          	add    BYTE PTR fs:[rbx+0x6c],al
+  2a:	75 62                	jne    8e <ClcMain+0x8e>
+  2c:	63 6f 73             	movsxd ebp,DWORD PTR [rdi+0x73]
+  2f:	31 20                	xor    DWORD PTR [rax],esp
+  31:	3e 20 00             	and    BYTE PTR ds:[rax],al
+
+Disassembly of section .rodata.str1.8:
+
+0000000000000000 <.rodata.str1.8>:
+   0:	5b                   	pop    rbx
+   1:	30 78 25             	xor    BYTE PTR [rax+0x25],bh
+   4:	30 31                	xor    BYTE PTR [rcx],dh
+   6:	36                   	ss
+   7:	6c                   	ins    BYTE PTR es:[rdi],dx
+   8:	78 7c                	js     86 <ClcMain+0x86>
+   a:	30 78 25             	xor    BYTE PTR [rax+0x25],bh
+   d:	30 31                	xor    BYTE PTR [rcx],dh
+   f:	36                   	ss
+  10:	6c                   	ins    BYTE PTR es:[rdi],dx
+  11:	78 29                	js     3c <ClcMain+0x3c>
+  13:	20 25 73 28 25 75    	and    BYTE PTR [rip+0x75252873],ah        # 7525288c <PrintMemoryEntry+0x7525279c>
+  19:	29 20                	sub    DWORD PTR [rax],esp
+  1b:	65                   	gs
+  1c:	78 74                	js     92 <ClcMain+0x92>
+  1e:	61                   	(bad)  
+  1f:	74 74                	je     95 <ClcMain+0x95>
+  21:	72 3a                	jb     5d <ClcMain+0x5d>
+  23:	25                   	.byte 0x25
+  24:	75 00                	jne    26 <ClcMain+0x26>
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 47 4e             	sub    BYTE PTR [rdi+0x4e],al
+   9:	55                   	push   rbp
+   a:	29 20                	sub    DWORD PTR [rax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	(bad)  
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[rax]
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 14    	or     BYTE PTR [rax+0x14000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	e6 00                	out    0x0,al
+  26:	00 00                	add    BYTE PTR [rax],al
+  28:	00 41 0e             	add    BYTE PTR [rcx+0xe],al
+  2b:	10 83 02 00 00 4c    	adc    BYTE PTR [rbx+0x4c000002],al
+  31:	00 00                	add    BYTE PTR [rax],al
+  33:	00 34 00             	add    BYTE PTR [rax+rax*1],dh
+  36:	00 00                	add    BYTE PTR [rax],al
+  38:	00 00                	add    BYTE PTR [rax],al
+  3a:	00 00                	add    BYTE PTR [rax],al
+  3c:	97                   	xchg   edi,eax
+  3d:	00 00                	add    BYTE PTR [rax],al
+  3f:	00 00                	add    BYTE PTR [rax],al
+  41:	51                   	push   rcx
+  42:	0e                   	(bad)  
+  43:	10 8f 02 45 0e 18    	adc    BYTE PTR [rdi+0x180e4502],cl
+  49:	8e 03                	mov    es,WORD PTR [rbx]
+  4b:	47 0e                	rex.RXB (bad) 
+  4d:	20 8d 04 49 0e 28    	and    BYTE PTR [rbp+0x280e4904],cl
+  53:	8c 05 41 0e 30 86    	mov    WORD PTR [rip+0xffffffff86300e41],es        # ffffffff86300e9a <PrintMemoryEntry+0xffffffff86300daa>
+  59:	06                   	(bad)  
+  5a:	43 0e                	rex.XB (bad) 
+  5c:	38 83 07 46 0e 60    	cmp    BYTE PTR [rbx+0x600e4607],al
+  62:	02 5b 0e             	add    bl,BYTE PTR [rbx+0xe]
+  65:	38 41 c3             	cmp    BYTE PTR [rcx-0x3d],al
+  68:	0e                   	(bad)  
+  69:	30 41 c6             	xor    BYTE PTR [rcx-0x3a],al
+  6c:	0e                   	(bad)  
+  6d:	28 42 cc             	sub    BYTE PTR [rdx-0x34],al
+  70:	0e                   	(bad)  
+  71:	20 42 cd             	and    BYTE PTR [rdx-0x33],al
+  74:	0e                   	(bad)  
+  75:	18 42 ce             	sbb    BYTE PTR [rdx-0x32],al
+  78:	0e                   	(bad)  
+  79:	10 42 cf             	adc    BYTE PTR [rdx-0x31],al
+  7c:	0e                   	(bad)  
+  7d:	08 00                	or     BYTE PTR [rax],al
+	...

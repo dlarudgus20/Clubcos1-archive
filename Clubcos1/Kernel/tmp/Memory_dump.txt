@@ -1,0 +1,251 @@
+
+tmp/Memory.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <MemoryEntryTypeStr>:
+   0:	48 83 ec 30          	sub    rsp,0x30
+   4:	83 ef 01             	sub    edi,0x1
+   7:	48 c7 44 24 08 00 00 	mov    QWORD PTR [rsp+0x8],0x0
+   e:	00 00 
+  10:	48 c7 44 24 10 00 00 	mov    QWORD PTR [rsp+0x10],0x0
+  17:	00 00 
+  19:	48 c7 44 24 18 00 00 	mov    QWORD PTR [rsp+0x18],0x0
+  20:	00 00 
+  22:	48 c7 44 24 20 00 00 	mov    QWORD PTR [rsp+0x20],0x0
+  29:	00 00 
+  2b:	48 c7 44 24 28 00 00 	mov    QWORD PTR [rsp+0x28],0x0
+  32:	00 00 
+  34:	48 8b 44 fc 08       	mov    rax,QWORD PTR [rsp+rdi*8+0x8]
+  39:	48 83 c4 30          	add    rsp,0x30
+  3d:	c3                   	ret    
+  3e:	66 90                	xchg   ax,ax
+
+0000000000000040 <CheckMemorySize>:
+  40:	53                   	push   rbx
+  41:	31 c0                	xor    eax,eax
+  43:	48 83 ec 10          	sub    rsp,0x10
+  47:	e8 00 00 00 00       	call   4c <CheckMemorySize+0xc>
+  4c:	48 89 c7             	mov    rdi,rax
+  4f:	48 89 c3             	mov    rbx,rax
+  52:	48 81 cf 00 00 00 60 	or     rdi,0x60000000
+  59:	e8 00 00 00 00       	call   5e <CheckMemorySize+0x1e>
+  5e:	48 c7 44 24 08 00 00 	mov    QWORD PTR [rsp+0x8],0x700000
+  65:	70 00 
+  67:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  6c:	48 3d ff ff ff 2f    	cmp    rax,0x2fffffff
+  72:	77 29                	ja     9d <CheckMemorySize+0x5d>
+  74:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+  79:	8b 02                	mov    eax,DWORD PTR [rdx]
+  7b:	89 04 24             	mov    DWORD PTR [rsp],eax
+  7e:	c7 02 cd ab 34 12    	mov    DWORD PTR [rdx],0x1234abcd
+  84:	8b 0a                	mov    ecx,DWORD PTR [rdx]
+  86:	f7 d1                	not    ecx
+  88:	89 0a                	mov    DWORD PTR [rdx],ecx
+  8a:	8b 02                	mov    eax,DWORD PTR [rdx]
+  8c:	3d 32 54 cb ed       	cmp    eax,0xedcb5432
+  91:	74 7d                	je     110 <CheckMemorySize+0xd0>
+  93:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+  98:	8b 0c 24             	mov    ecx,DWORD PTR [rsp]
+  9b:	89 0a                	mov    DWORD PTR [rdx],ecx
+  9d:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+  a2:	8b 42 fc             	mov    eax,DWORD PTR [rdx-0x4]
+  a5:	89 44 24 04          	mov    DWORD PTR [rsp+0x4],eax
+  a9:	c7 42 fc cd ab 34 12 	mov    DWORD PTR [rdx-0x4],0x1234abcd
+  b0:	8b 4a fc             	mov    ecx,DWORD PTR [rdx-0x4]
+  b3:	f7 d1                	not    ecx
+  b5:	89 4a fc             	mov    DWORD PTR [rdx-0x4],ecx
+  b8:	8b 42 fc             	mov    eax,DWORD PTR [rdx-0x4]
+  bb:	3d 32 54 cb ed       	cmp    eax,0xedcb5432
+  c0:	74 2e                	je     f0 <CheckMemorySize+0xb0>
+  c2:	8b 44 24 04          	mov    eax,DWORD PTR [rsp+0x4]
+  c6:	89 42 fc             	mov    DWORD PTR [rdx-0x4],eax
+  c9:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  ce:	48 2d 00 00 10 00    	sub    rax,0x100000
+  d4:	48 89 44 24 08       	mov    QWORD PTR [rsp+0x8],rax
+  d9:	48 89 df             	mov    rdi,rbx
+  dc:	e8 00 00 00 00       	call   e1 <CheckMemorySize+0xa1>
+  e1:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+  e6:	48 83 c4 10          	add    rsp,0x10
+  ea:	5b                   	pop    rbx
+  eb:	c3                   	ret    
+  ec:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+  f0:	8b 42 fc             	mov    eax,DWORD PTR [rdx-0x4]
+  f3:	f7 d0                	not    eax
+  f5:	89 42 fc             	mov    DWORD PTR [rdx-0x4],eax
+  f8:	8b 42 fc             	mov    eax,DWORD PTR [rdx-0x4]
+  fb:	3d cd ab 34 12       	cmp    eax,0x1234abcd
+ 100:	75 c0                	jne    c2 <CheckMemorySize+0x82>
+ 102:	8b 44 24 04          	mov    eax,DWORD PTR [rsp+0x4]
+ 106:	89 42 fc             	mov    DWORD PTR [rdx-0x4],eax
+ 109:	eb ce                	jmp    d9 <CheckMemorySize+0x99>
+ 10b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+ 110:	8b 02                	mov    eax,DWORD PTR [rdx]
+ 112:	f7 d0                	not    eax
+ 114:	89 02                	mov    DWORD PTR [rdx],eax
+ 116:	8b 02                	mov    eax,DWORD PTR [rdx]
+ 118:	3d cd ab 34 12       	cmp    eax,0x1234abcd
+ 11d:	0f 85 75 ff ff ff    	jne    98 <CheckMemorySize+0x58>
+ 123:	eb 14                	jmp    139 <CheckMemorySize+0xf9>
+ 125:	8b 0a                	mov    ecx,DWORD PTR [rdx]
+ 127:	f7 d1                	not    ecx
+ 129:	89 0a                	mov    DWORD PTR [rdx],ecx
+ 12b:	8b 0a                	mov    ecx,DWORD PTR [rdx]
+ 12d:	81 f9 cd ab 34 12    	cmp    ecx,0x1234abcd
+ 133:	0f 85 5f ff ff ff    	jne    98 <CheckMemorySize+0x58>
+ 139:	8b 04 24             	mov    eax,DWORD PTR [rsp]
+ 13c:	89 02                	mov    DWORD PTR [rdx],eax
+ 13e:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+ 143:	48 05 00 00 10 00    	add    rax,0x100000
+ 149:	48 89 44 24 08       	mov    QWORD PTR [rsp+0x8],rax
+ 14e:	48 8b 44 24 08       	mov    rax,QWORD PTR [rsp+0x8]
+ 153:	48 3d ff ff ff 2f    	cmp    rax,0x2fffffff
+ 159:	0f 87 3e ff ff ff    	ja     9d <CheckMemorySize+0x5d>
+ 15f:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+ 164:	8b 0a                	mov    ecx,DWORD PTR [rdx]
+ 166:	89 0c 24             	mov    DWORD PTR [rsp],ecx
+ 169:	c7 02 cd ab 34 12    	mov    DWORD PTR [rdx],0x1234abcd
+ 16f:	8b 0a                	mov    ecx,DWORD PTR [rdx]
+ 171:	f7 d1                	not    ecx
+ 173:	89 0a                	mov    DWORD PTR [rdx],ecx
+ 175:	8b 0a                	mov    ecx,DWORD PTR [rdx]
+ 177:	81 f9 32 54 cb ed    	cmp    ecx,0xedcb5432
+ 17d:	0f 85 15 ff ff ff    	jne    98 <CheckMemorySize+0x58>
+ 183:	eb a0                	jmp    125 <CheckMemorySize+0xe5>
+
+Disassembly of section .rodata:
+
+0000000000000000 <.rodata>:
+   0:	4d                   	rex.WRB
+   1:	45                   	rex.RB
+   2:	4d                   	rex.WRB
+   3:	4f 52                	rex.WRXB push r10
+   5:	59                   	pop    rcx
+   6:	45                   	rex.RB
+   7:	4e 54                	rex.WRX push rsp
+   9:	52                   	push   rdx
+   a:	59                   	pop    rcx
+   b:	5f                   	pop    rdi
+   c:	55                   	push   rbp
+   d:	53                   	push   rbx
+   e:	41                   	rex.B
+   f:	42                   	rex.X
+  10:	4c                   	rex.WR
+  11:	45 00 00             	add    BYTE PTR [r8],r8b
+  14:	4d                   	rex.WRB
+  15:	45                   	rex.RB
+  16:	4d                   	rex.WRB
+  17:	4f 52                	rex.WRXB push r10
+  19:	59                   	pop    rcx
+  1a:	45                   	rex.RB
+  1b:	4e 54                	rex.WRX push rsp
+  1d:	52                   	push   rdx
+  1e:	59                   	pop    rcx
+  1f:	5f                   	pop    rdi
+  20:	52                   	push   rdx
+  21:	45 53                	rex.RB push r11
+  23:	45 52                	rex.RB push r10
+  25:	56                   	push   rsi
+  26:	45                   	rex.RB
+  27:	44 00 00             	add    BYTE PTR [rax],r8b
+  2a:	4d                   	rex.WRB
+  2b:	45                   	rex.RB
+  2c:	4d                   	rex.WRB
+  2d:	4f 52                	rex.WRXB push r10
+  2f:	59                   	pop    rcx
+  30:	45                   	rex.RB
+  31:	4e 54                	rex.WRX push rsp
+  33:	52                   	push   rdx
+  34:	59                   	pop    rcx
+  35:	5f                   	pop    rdi
+  36:	41                   	rex.B
+  37:	43 50                	rex.XB push r8
+  39:	49 5f                	rex.WB pop r15
+  3b:	52                   	push   rdx
+  3c:	45                   	rex.RB
+  3d:	43 00 00             	rex.XB add BYTE PTR [r8],al
+  40:	4d                   	rex.WRB
+  41:	45                   	rex.RB
+  42:	4d                   	rex.WRB
+  43:	4f 52                	rex.WRXB push r10
+  45:	59                   	pop    rcx
+  46:	45                   	rex.RB
+  47:	4e 54                	rex.WRX push rsp
+  49:	52                   	push   rdx
+  4a:	59                   	pop    rcx
+  4b:	5f                   	pop    rdi
+  4c:	41                   	rex.B
+  4d:	43 50                	rex.XB push r8
+  4f:	49 5f                	rex.WB pop r15
+  51:	4e 56                	rex.WRX push rsi
+  53:	53                   	push   rbx
+  54:	00 00                	add    BYTE PTR [rax],al
+  56:	4d                   	rex.WRB
+  57:	45                   	rex.RB
+  58:	4d                   	rex.WRB
+  59:	4f 52                	rex.WRXB push r10
+  5b:	59                   	pop    rcx
+  5c:	45                   	rex.RB
+  5d:	4e 54                	rex.WRX push rsp
+  5f:	52                   	push   rdx
+  60:	59                   	pop    rcx
+  61:	5f                   	pop    rdi
+  62:	42                   	rex.X
+  63:	41                   	rex.B
+  64:	44                   	rex.R
+  65:	4d                   	rex.WRB
+  66:	45                   	rex.RB
+  67:	4d 00 00             	rex.WRB add BYTE PTR [r8],r8b
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 47 4e             	sub    BYTE PTR [rdi+0x4e],al
+   9:	55                   	push   rbp
+   a:	29 20                	sub    DWORD PTR [rax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	(bad)  
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[rax]
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 14    	or     BYTE PTR [rax+0x14000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	3e 00 00             	add    BYTE PTR ds:[rax],al
+  27:	00 00                	add    BYTE PTR [rax],al
+  29:	44 0e                	rex.R (bad) 
+  2b:	38 79 0e             	cmp    BYTE PTR [rcx+0xe],bh
+  2e:	08 00                	or     BYTE PTR [rax],al
+  30:	24 00                	and    al,0x0
+  32:	00 00                	add    BYTE PTR [rax],al
+  34:	34 00                	xor    al,0x0
+  36:	00 00                	add    BYTE PTR [rax],al
+  38:	00 00                	add    BYTE PTR [rax],al
+  3a:	00 00                	add    BYTE PTR [rax],al
+  3c:	45 01 00             	add    DWORD PTR [r8],r8d
+  3f:	00 00                	add    BYTE PTR [rax],al
+  41:	41 0e                	rex.B (bad) 
+  43:	10 83 02 46 0e 20    	adc    BYTE PTR [rbx+0x200e4602],al
+  49:	02 a3 0a 0e 10 41    	add    ah,BYTE PTR [rbx+0x41100e0a]
+  4f:	c3                   	ret    
+  50:	0e                   	(bad)  
+  51:	08 45 0b             	or     BYTE PTR [rbp+0xb],al
+  54:	00 00                	add    BYTE PTR [rax],al
+	...

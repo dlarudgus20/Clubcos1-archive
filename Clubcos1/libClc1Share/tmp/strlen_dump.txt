@@ -1,0 +1,50 @@
+
+tmp/strlen.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <strlen>:
+   0:	31 c0                	xor    eax,eax
+   2:	80 3f 00             	cmp    BYTE PTR [rdi],0x0
+   5:	74 15                	je     1c <strlen+0x1c>
+   7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+   e:	00 00 
+  10:	48 83 c0 01          	add    rax,0x1
+  14:	80 3c 07 00          	cmp    BYTE PTR [rdi+rax*1],0x0
+  18:	75 f6                	jne    10 <strlen+0x10>
+  1a:	f3 c3                	repz ret 
+  1c:	f3 c3                	repz ret 
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [rdi+0x43],al
+   3:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   6:	28 47 4e             	sub    BYTE PTR [rdi+0x4e],al
+   9:	55                   	push   rbp
+   a:	29 20                	sub    DWORD PTR [rax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	(bad)  
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[rax]
+
+Disassembly of section .eh_frame:
+
+0000000000000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [rax],al
+   4:	00 00                	add    BYTE PTR [rax],al
+   6:	00 00                	add    BYTE PTR [rax],al
+   8:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+   b:	00 01                	add    BYTE PTR [rcx],al
+   d:	78 10                	js     1f <.eh_frame+0x1f>
+   f:	01 1b                	add    DWORD PTR [rbx],ebx
+  11:	0c 07                	or     al,0x7
+  13:	08 90 01 00 00 14    	or     BYTE PTR [rax+0x14000001],dl
+  19:	00 00                	add    BYTE PTR [rax],al
+  1b:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  1e:	00 00                	add    BYTE PTR [rax],al
+  20:	00 00                	add    BYTE PTR [rax],al
+  22:	00 00                	add    BYTE PTR [rax],al
+  24:	1e                   	(bad)  
+	...

@@ -1,0 +1,525 @@
+Archive member included because of file (symbol)
+
+../libClc1Share/bin/libClc1Share.a(memset_2.o)
+                              tmp/Graphic.o (memset_2)
+../libClc1Share/bin/libClc1Share.a(memset.o)
+                              tmp/Main.o (memset)
+../libClc1Share/bin/libClc1Share.a(sprintf.o)
+                              tmp/Graphic.o (vsprintf)
+../libClc1Share/bin/libClc1Share.a(strnlen.o)
+                              ../libClc1Share/bin/libClc1Share.a(sprintf.o) (strnlen)
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/Gdt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/Idt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/Memory.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/Interrupt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/Main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/EnglishFont.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 tmp/Graphic.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../libClc1Share/bin/libClc1Share.a(strnlen.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000400000                PROVIDE (__executable_start, 0x400000)
+                0x00000000004000b0                . = (0x400000 + SIZEOF_HEADERS)
+
+.text           0x0000000000500000     0x1e52
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000500000       0x2d tmp/AsmFunc.o
+                0x0000000000500000                ClcEntry
+                0x0000000000500005                LoadGdt
+                0x0000000000500015                LoadIdt
+                0x0000000000500025                GetCr0
+                0x0000000000500029                SetCr0
+ *fill*         0x000000000050002d        0x3 90909090
+ .text          0x0000000000500030      0x852 tmp/InterruptAsm.o
+                0x0000000000500030                IntHandler0x00
+                0x0000000000500094                IntHandler0x01
+                0x00000000005000f8                IntHandler0x02
+                0x000000000050015c                IntHandler0x03
+                0x00000000005001c0                IntHandler0x04
+                0x0000000000500224                IntHandler0x05
+                0x0000000000500288                IntHandler0x06
+                0x00000000005002ec                IntHandler0x07
+                0x0000000000500350                IntHandler0x08
+                0x00000000005003b8                IntHandler0x09
+                0x000000000050041c                IntHandler0x0a
+                0x0000000000500484                IntHandler0x0b
+                0x00000000005004ec                IntHandler0x0c
+                0x0000000000500554                IntHandler0x0d
+                0x00000000005005bc                IntHandler0x0e
+                0x0000000000500624                IntHandler0x0f
+                0x0000000000500688                IntHandler0x10
+                0x00000000005006ec                IntHandler0x11
+                0x0000000000500754                IntHandler0x12
+                0x00000000005007b8                IntHandler0x13
+                0x000000000050081c                DefaultHandler
+ *fill*         0x0000000000500882        0xe 90909090
+ .text          0x0000000000500890       0x3d tmp/Gdt.o
+                0x0000000000500890                InitGdt2
+ *fill*         0x00000000005008cd        0x3 90909090
+ .text          0x00000000005008d0       0x3c tmp/Idt.o
+                0x00000000005008d0                InitIdt
+ *fill*         0x000000000050090c        0x4 90909090
+ .text          0x0000000000500910      0x185 tmp/Memory.o
+                0x0000000000500910                MemoryEntryTypeStr
+                0x0000000000500950                CheckMemorySize
+ *fill*         0x0000000000500a95        0xb 90909090
+ .text          0x0000000000500aa0       0x41 tmp/Interrupt.o
+                0x0000000000500aa0                _DefaultHandler
+ *fill*         0x0000000000500ae1        0xf 90909090
+ .text          0x0000000000500af0      0x187 tmp/Main.o
+                0x0000000000500af0                ClcMain
+                0x0000000000500be0                PrintMemoryEntry
+ *fill*         0x0000000000500c77        0x1 90909090
+ .text          0x0000000000500c78        0x0 tmp/EnglishFont.o
+ *fill*         0x0000000000500c78        0x8 90909090
+ .text          0x0000000000500c80      0x2c5 tmp/Graphic.o
+                0x0000000000500c80                DrawBoxFill
+                0x0000000000500ce0                DrawFont
+                0x0000000000500e50                DrawString
+                0x0000000000500ea0                DrawStringFormat
+ *fill*         0x0000000000500f45        0xb 90909090
+ .text          0x0000000000500f50        0xe ../libClc1Share/bin/libClc1Share.a(memset_2.o)
+                0x0000000000500f50                memset_2
+ *fill*         0x0000000000500f5e        0x2 90909090
+ .text          0x0000000000500f60        0xd ../libClc1Share/bin/libClc1Share.a(memset.o)
+                0x0000000000500f60                memset
+ *fill*         0x0000000000500f6d        0x3 90909090
+ .text          0x0000000000500f70      0xea3 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+                0x0000000000501510                vsprintf
+                0x0000000000501dd0                sprintf
+ *fill*         0x0000000000501e13        0xd 90909090
+ .text          0x0000000000501e20       0x32 ../libClc1Share/bin/libClc1Share.a(strnlen.o)
+                0x0000000000501e20                strnlen
+ *(.gnu.warning)
+
+.iplt           0x0000000000501e60        0x0
+ .iplt          0x0000000000000000        0x0 tmp/AsmFunc.o
+
+.rodata         0x0000000000501e58      0x470
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000000501e58       0x6a tmp/Memory.o
+ .rodata.str1.1
+                0x0000000000501ec2       0x26 tmp/Interrupt.o
+ .rodata.str1.1
+                0x0000000000501ee8       0x34 tmp/Main.o
+ *fill*         0x0000000000501f1c        0x4 
+ .rodata.str1.8
+                0x0000000000501f20       0x26 tmp/Main.o
+ *fill*         0x0000000000501f46        0x2 
+ .rodata.str1.8
+                0x0000000000501f48       0x50 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+                                         0x4d (size before relaxing)
+ .rodata.str1.1
+                0x0000000000501f98        0x7 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+ *fill*         0x0000000000501f9f        0x1 
+ .rodata        0x0000000000501fa0      0x328 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+
+.rela.dyn       0x00000000005022c8        0x0
+ .rela.iplt     0x0000000000000000        0x0 tmp/AsmFunc.o
+
+.rodata1
+ *(.rodata1)
+                0x0000000000502400                . = ALIGN (0x200)
+
+.data           0x0000000000502400     0x1000
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000502400        0x0 tmp/Gdt.o
+ .data          0x0000000000502400        0x0 tmp/Idt.o
+ .data          0x0000000000502400        0x0 tmp/Memory.o
+ .data          0x0000000000502400        0x0 tmp/Interrupt.o
+ .data          0x0000000000502400        0x0 tmp/Main.o
+ .data          0x0000000000502400     0x1000 tmp/EnglishFont.o
+                0x0000000000502400                g_vucEnglishFont
+ .data          0x0000000000503400        0x0 tmp/Graphic.o
+ .data          0x0000000000503400        0x0 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+ .data          0x0000000000503400        0x0 ../libClc1Share/bin/libClc1Share.a(strnlen.o)
+
+.igot.plt       0x0000000000503400        0x0
+ .igot.plt      0x0000000000000000        0x0 tmp/AsmFunc.o
+
+.data1
+ *(.data1)
+                0x0000000000503400                __bss_start = .
+
+.bss            0x0000000000503400        0x0
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000503400        0x0 tmp/Gdt.o
+ .bss           0x0000000000503400        0x0 tmp/Idt.o
+ .bss           0x0000000000503400        0x0 tmp/Memory.o
+ .bss           0x0000000000503400        0x0 tmp/Interrupt.o
+ .bss           0x0000000000503400        0x0 tmp/Main.o
+ .bss           0x0000000000503400        0x0 tmp/EnglishFont.o
+ .bss           0x0000000000503400        0x0 tmp/Graphic.o
+ .bss           0x0000000000503400        0x0 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+ .bss           0x0000000000503400        0x0 ../libClc1Share/bin/libClc1Share.a(strnlen.o)
+ *(COMMON)
+                0x0000000000503400                . = ALIGN ((. != 0x0)?0x8:0x1)
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+
+.rela.text      0x0000000000503400        0x0
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ .rela.text     0x0000000000000000        0x0 tmp/AsmFunc.o
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro* .rela.gnu.linkonce.d.rel.ro.*)
+
+.rel.data
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.ldata
+ *(.rel.ldata .rel.ldata.* .rel.gnu.linkonce.l.*)
+
+.rela.ldata
+ *(.rela.ldata .rela.ldata.* .rela.gnu.linkonce.l.*)
+
+.rel.lbss
+ *(.rel.lbss .rel.lbss.* .rel.gnu.linkonce.lb.*)
+
+.rela.lbss
+ *(.rela.lbss .rela.lbss.* .rela.gnu.linkonce.lb.*)
+
+.rel.lrodata
+ *(.rel.lrodata .rel.lrodata.* .rel.gnu.linkonce.lr.*)
+
+.rela.lrodata
+ *(.rela.lrodata .rela.lrodata.* .rela.gnu.linkonce.lr.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.fini
+ *(.fini)
+                0x0000000000503400                PROVIDE (__etext, .)
+                0x0000000000503400                PROVIDE (_etext, .)
+                0x0000000000503400                PROVIDE (etext, .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x0000000000503400      0x2e0
+ *(.eh_frame)
+ .eh_frame      0x0000000000503400       0x30 tmp/Gdt.o
+ .eh_frame      0x0000000000503430       0x18 tmp/Idt.o
+                                         0x30 (size before relaxing)
+ .eh_frame      0x0000000000503448       0x40 tmp/Memory.o
+                                         0x58 (size before relaxing)
+ .eh_frame      0x0000000000503488       0x18 tmp/Interrupt.o
+                                         0x30 (size before relaxing)
+ .eh_frame      0x00000000005034a0       0x68 tmp/Main.o
+                                         0x80 (size before relaxing)
+ .eh_frame      0x0000000000503508       0xf8 tmp/Graphic.o
+                                        0x110 (size before relaxing)
+ .eh_frame      0x0000000000503600       0xc8 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+                                         0xd8 (size before relaxing)
+ .eh_frame      0x00000000005036c8       0x18 ../libClc1Share/bin/libClc1Share.a(strnlen.o)
+                                         0x30 (size before relaxing)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00000000005036e0                . = (ALIGN (0x200000) - ((0x200000 - .) & 0x1fffff))
+                0x0000000000704000                . = DATA_SEGMENT_ALIGN (0x200000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000000704000        0x0
+                0x0000000000704000                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x0000000000704000                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000000704000        0x0
+                0x0000000000704000                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x0000000000704000                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000000704000        0x0
+                0x0000000000704000                PROVIDE (__fini_array_start, .)
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+                0x0000000000704000                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+                0x0000000000704000                . = DATA_SEGMENT_RELRO_END (., 0x18)
+
+.got.plt
+ *(.got.plt)
+                0x0000000000704000                _edata = .
+                0x0000000000704000                PROVIDE (edata, .)
+
+.lbss
+ *(.dynlbss)
+ *(.lbss .lbss.* .gnu.linkonce.lb.*)
+ *(LARGE_COMMON)
+                0x0000000000704000                . = ALIGN (0x8)
+
+.lrodata
+ *(.lrodata .lrodata.* .gnu.linkonce.lr.*)
+
+.ldata          0x0000000000b04000        0x0
+ *(.ldata .ldata.* .gnu.linkonce.l.*)
+                0x0000000000b04000                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x0000000000b04000                . = ALIGN (0x8)
+                0x0000000000b04000                _end = .
+                0x0000000000b04000                PROVIDE (end, .)
+                0x0000000000b04000                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 tmp/Gdt.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 tmp/Idt.o
+ .comment       0x0000000000000000       0x12 tmp/Memory.o
+ .comment       0x0000000000000000       0x12 tmp/Interrupt.o
+ .comment       0x0000000000000000       0x12 tmp/Main.o
+ .comment       0x0000000000000000       0x12 tmp/EnglishFont.o
+ .comment       0x0000000000000000       0x12 tmp/Graphic.o
+ .comment       0x0000000000000000       0x12 ../libClc1Share/bin/libClc1Share.a(sprintf.o)
+ .comment       0x0000000000000000       0x12 ../libClc1Share/bin/libClc1Share.a(strnlen.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+Address of section .text set to 0x500000
+LOAD tmp/AsmFunc.o
+LOAD tmp/InterruptAsm.o
+LOAD tmp/Gdt.o
+LOAD tmp/Idt.o
+LOAD tmp/Memory.o
+LOAD tmp/Interrupt.o
+LOAD tmp/Main.o
+LOAD tmp/EnglishFont.o
+LOAD tmp/Graphic.o
+LOAD ../libClc1Share/bin/libClc1Share.a
+OUTPUT(tmp/C_Kernel.exe elf64-x86-64)

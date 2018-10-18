@@ -1,0 +1,39 @@
+17:54:15 **** Incremental Build of configuration Default for project Clubcos1 ****
+make all 
+make -C libClc1Share
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+##################################
+# libClc1Share makefile
+##################################
+make -r bin/libClc1Share.a
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[2]: 'bin/libClc1Share.a' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/libClc1Share'
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos1/Clubcos1'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos1/Clubcos1'
+
+17:54:16 Build Finished (took 1s.596ms)
+
